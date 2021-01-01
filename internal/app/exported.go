@@ -147,7 +147,9 @@ func (c *Configuration) Hydrate(local repository.Interface, version *string, rel
 		*releaseName = *local.GetTag()
 	}
 	
-	log.Warnf("Local tag: %v -- release name: %v", *local.GetTag(), c.ReleaseName)
+	log.Warnf("Local get tag: %v", *local.GetTag())
+	log.Warnf("version: %v", version)
+	log.Warnf("releaseName: %v", releaseName)
 
 	return nil
 }
