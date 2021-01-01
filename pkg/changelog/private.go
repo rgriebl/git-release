@@ -52,6 +52,7 @@ func GetReleasesLines(content []string) []int {
 	for i, line := range content {
 		if regex.MatchString(line) {
 			lines = append(lines, i)
+			log.Warnf("Found release at line %v: %v", i, line)
 		}
 	}
 
