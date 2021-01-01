@@ -5,6 +5,8 @@ import (
 	"regexp"
 
 	"github.com/spf13/afero"
+	
+	log "github.com/sirupsen/logrus"
 )
 
 // Read changelog line by line and return content as []string
