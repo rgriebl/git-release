@@ -26,7 +26,7 @@ func init() {
 	log.SetOutput(os.Stdout)
 	log.SetLevel(log.InfoLevel)
 
-	log.Info("'git-release' version: ", Version)
+	log.Info("'git-release' rg version: ", Version)
 }
 
 func main() {
