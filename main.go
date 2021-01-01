@@ -46,7 +46,7 @@ func main() {
 		log.Fatal(err)
 	}
 	
-	log.Warning(release.Changes.Version)
+	log.Warn("Changes Version:", release.Changes.Version)
 
 	if !conf.IgnoreChangelog {
 		if err = conf.GetReleaseBody(release.Changes, fs); err != nil {
