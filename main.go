@@ -45,6 +45,8 @@ func main() {
 	if err := conf.Hydrate(repo, &release.Changes.Version, &release.Name); err != nil {
 		log.Fatal(err)
 	}
+	
+	log.Warning(release.Changes.Version)
 
 	if !conf.IgnoreChangelog {
 		if err = conf.GetReleaseBody(release.Changes, fs); err != nil {
