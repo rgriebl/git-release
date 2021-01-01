@@ -36,11 +36,13 @@ func GetAssets(fs afero.Fs, args []string) []asset.Asset {
 		}
 
 		for _, file := range files {
+			log.Warnf("asset file: %v", file)
 			if file != "." {
 				asset := asset.Asset{
 					Name: filepath.Base(file),
 					Path: file,
 				}
+				log.Warnf(" -> %v : %v", asset.Name, asset.Path)
 
 				assets = append(assets, asset)
 			}
